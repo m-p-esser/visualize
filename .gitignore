@@ -103,7 +103,7 @@ ENV/
 .mypy_cache/
 
 # Data files
-/data/
+/data/datasets_overview.xlsx
 
 # .env files
 .env
