@@ -21,7 +21,8 @@
 			{% for diagram in diagrams %}
 			<div class="col-sm-3 cold-md-6 cold-lg-12">
 				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="diagram.name" class="card-img-top"></a>
+					<a href="{{ url_for('diagram', diagram_name=diagram.name|lower|replace(' ','_')) }}">
+						<img src="{{ url_for('static', filename='/img/diagram-icons/' + diagram.name|lower|replace(' ','_') + '.svg') }}"" alt="{{ diagram.name }}" class="card-img-top"></a>
 					<div class="card-body">
 						<h5 class="card-title">{{ diagram.name }}</h5>
 					</div>
@@ -30,124 +31,5 @@
 			{% endfor %}
 		</div>
 	</container>
-
-
-	<!-- <container>
-
-		<div class="row">
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-3 cold-md-6 cold-lg-12">
-				<div class="card border-0">
-					<a href="index.html"><img src="static/img/diagram-icons/histogram.svg" alt="Histogram" class="card-img-top"></a>
-					<div class="card-body">
-						<h5 class="card-title">Histogram</h5>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-	</container> -->
-
-	<!-- End First Column Section -->
 
 {% endblock %}
